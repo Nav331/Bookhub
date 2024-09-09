@@ -1,0 +1,17 @@
+.social-media-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 200px; 
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .contact-information{
+    color: #3D3C3C;
+    font-family: HK Grotesk;
+    font-weight: 600px;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
