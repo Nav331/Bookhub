@@ -1,0 +1,149 @@
+body, html {
+  height: 100%; 
+  margin:0;
+  background-color: #E5E7EB;
+  display: block; 
+}
+.login-page {
+  height: 100vh; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+}
+
+.App-container {
+  width: 100%;
+  height: 100%; 
+  display: flex;
+  background-color: #F8FAFC;
+}
+
+.image-container {
+  height: 99.50%;     
+  width: 100%; 
+  flex:1.5
+}
+
+.image-container img {
+  width: 99.50%;       
+  height: 100%;      
+}
+
+.login-container {
+  width: 350px;
+  height: 400px;
+  margin: auto 40px;
+  margin-top: 180px;
+  text-align: center;
+  flex:1
+}
+.login-container img {
+  margin-top: 20px;
+  width: 141px;
+  height: 48px;
+  display: inline-block;
+}
+
+.container-input {
+  margin: 20px;          
+  display: flex;
+  flex-direction: column; 
+}
+
+input[type="text"] {
+  padding: 8px; 
+  height:50px;
+  font-size: 16px; 
+  border: 2px solid #ccc; 
+  border-radius: 4px;
+  width: 100%; 
+  margin-top: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+input[type="text"]:focus {
+  border-color: green; 
+  outline: none;
+}
+input[type="password"] {
+  padding: 8px; 
+  height:50px;
+  font-size: 16px; 
+  border: 2px solid #ccc; 
+  border-radius: 4px;
+  width: 100%; 
+  margin-top: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+input[type="password"]:focus {
+  border-color: green; 
+  outline: none;
+}
+
+label {
+  margin-top: 8px;
+  font-size: 16px; 
+  text-align: left;
+  margin-right: 450px;
+  font-family: inter;
+  font-weight: 600;
+}
+.btn-sub {
+  width: 100%;
+  height: 46px;
+  text-align: center;
+  color: #ccc;
+  margin-top: 15px;
+  background-color: #0284C7;
+  border-radius: 10px;
+  border: none;
+}
+
+.error-text {
+  font-weight: 500;
+  margin-right: 200px;
+  color: #EF4444;
+  font-size: 20px;
+}
+
+.sucess-text {
+  font-weight: 500;
+  margin-right: 175px;
+  color: green;
+  font-size: 20px;
+  margin-right: 200px;
+}
+@media (max-width: 768px) {
+  .App-container {
+    display: block;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    width: 100%; 
+    padding: 10px; 
+  }
+
+  .login-container {
+    width: 100%; 
+    max-width: 350px; 
+    margin: 0 auto; 
+    text-align: center;
+  }
+
+  .image-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: auto; 
+    padding: 10px; 
+  }
+
+  .image-container img {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+  }
+}

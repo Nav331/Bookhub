@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React,{useState} from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/login';
+import Home from './Home/Home';
+import Books from './booksleves/book';
+import PageNotFound from './PageNotFound/PageNotFound';
+import ProductView from './ProductDetails/ProductDetails';
+import Cart from './Cart/Cart';
+import PrivateRoute from './ProtectedRoute/ProtectedRoute';
 function App() {
+  const [cart, setCart] = useState([]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path='/Login' element={<Login />} />
+          <Route path='/' element={
+            <PrivateRoute>
+              <Home />
+            </PrivateRoute>
+          } />
+          <Route path='/Books' element={
+            <PrivateRoute>
+              <Books  cart={cart} setCart={setCart}/>
+            </PrivateRoute>
+          } />
+          <Route path='/productView/:id'   element={
+            <PrivateRoute>
+              <ProductView/>
+            </PrivateRoute>
+          } /><Route path='/cart'  element={
+            <PrivateRoute>
+              <Cart cart={cart} setCart={setCart}/>
+            </PrivateRoute>
+          } />
+          <Route path='*' element={<PageNotFound />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
